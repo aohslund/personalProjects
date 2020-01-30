@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+body {
+  font-family: Roboto;
+}
+
+#charTable {
+  width: 720px;
+  padding: 10px 10px;
+  background: #f7f7f7;
+}
+
+.charTableEntry {
+	width: 120px;
+	padding: 10px 10px;
+}
+
+</style>
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<input id="id_initiative" name="initiative" type="number" placeholder="Enter initiative here..." />
+<select id="id_name">
+	<option disabled selected value="0">-- Choose an Option --</option>
+	<option value="Ariameia">Ariameia</option>
+	<option value="Bharash">Bharash</option>
+	<option value="Edra">Edra</option>
+	<option value="Jin">Jin</option>
+	<option value="Rowe">Rowe</option>
+	<option value="Tiki">Tiki</option>
+	<option value="Enemy">Enemy</option>
+</select>
+<input id="id_hp" name="hp" type="number" placeholder="Enter hp here..." />
+<button id="add_btn">Add</button>
+<hr/>
+<div id="charTable">
+<table>
+  <thead>
+    <tr>
+	  <th class="charTableEntry">Initiative</th>
+      <th class="charTableEntry">Name</th>
+      <th class="charTableEntry">HP</th>
+	  <th><input id="numberInput" type="number" placeholder="Enter damage/healing" size="10" /></th>
+    </tr>
+  </thead>
+  <tbody class="mytab"></tbody>
+</table>
+</div>
+
+<script src="./FightingOrder.js"></script>
+</body>
+</html>
