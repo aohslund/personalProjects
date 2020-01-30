@@ -37,8 +37,7 @@ $("#add_btn").on('click', function(e) {
 
 $("#charTable").on('click', 'input[id="damage_btn"]', function(event) {
 var row_index = $(this).parent().parent().index();
-var currHP = parseInt(data[row_index].hp, 10) - $('#numberInput').val();
-$('#numberInput').val('');
+var currHP = parseInt(data[row_index].hp, 10) - $('#damageIn').val();
 if(currHP < 0) currHP = 0;
 data[row_index].hp = currHP;
 $('.mytab').html('');
@@ -53,8 +52,7 @@ $('.mytab').html('');
 
 $("#charTable").on('click', 'input[id="heal_btn"]', function(event) {
 var row_index = $(this).parent().parent().index();
-var currHP = parseInt(data[row_index].hp, 10) + $('#numberInput').val();
-$('#numberInput').val('');
+var currHP = parseInt(data[row_index].hp, 10) + $('#healingIn').val();
 if(currHP > parseInt(data[row_index].max, 10)) currHP = data[row_index].max;
 data[row_index].hp = currHP;
 $('.mytab').html('');
