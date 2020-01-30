@@ -52,7 +52,7 @@ $('.mytab').html('');
 
 $("#charTable").on('click', 'input[id="heal_btn"]', function(event) {
 var row_index = $(this).parent().parent().index();
-var currHP = parseInt(data[row_index].hp, 10) + $('#healingIn').val();
+var currHP = parseInt(data[row_index].hp, 10) + parseInt($('#healingIn').val(), 10);
 if(currHP > parseInt(data[row_index].max, 10)) currHP = data[row_index].max;
 data[row_index].hp = currHP;
 $('.mytab').html('');
