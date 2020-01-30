@@ -27,10 +27,18 @@ $("#add_btn").on('click', function(e) {
 
   $('.mytab').html('');
   $.each(data, function(index, value) {
-    $('<tr><td class="charTableEntry">' + value.initiative + '</td><td class="charTableEntry">' + value.name + '</td><td class="charTableEntry">' + 
-	value.hp + '/' + value.max + '</td><td class="charTableEntry"><input type="button" class="damage_btn" id="damage_btn">Damage</button></td>' + 
-	'<td class="charTableEntry"><input type="button" id="heal_btn">Heal</button></td><td class="charTableentry">' +
-	'<input type="button" id="delete_btn">Remove</input></td></tr>').appendTo($('.mytab'));
+	  if(value.name.includes("Enemy")){
+    $('<tr class="badChar"><td>' + value.initiative + '</td><td>' + value.name + '</td><td>' + value.hp + '/' + value.max + 
+	'</td><td><input type="button" class="damage_btn" id="damage_btn">Damage</button></td>' + 
+	'<td><input type="button" class="heal_btn" id="heal_btn">Heal</button></td><td>' +
+	'<input type="button" class="delete_btn" id="delete_btn" value="Remove"></input></td></tr>').appendTo($('.mytab'));
+	  }
+	  else{
+	$('<tr class="goodChar"><td>' + value.initiative + '</td><td>' + value.name + '</td><td>' + value.hp + '/' + value.max + 
+	'</td><td><input type="button" class="damage_btn" id="damage_btn">Damage</button></td>' + 
+	'<td><input type="button" class="heal_btn" id="heal_btn">Heal</button></td><td>' +
+	'<input type="button" class="delete_btn" id="delete_btn" value="Remove"></input></td></tr>').appendTo($('.mytab'));
+	  }
   });
 
 });
@@ -42,10 +50,18 @@ if(currHP < 0) currHP = 0;
 data[row_index].hp = currHP;
 $('.mytab').html('');
   $.each(data, function(index, value) {
-    $('<tr><td class="charTableEntry">' + value.initiative + '</td><td class="charTableEntry">' + value.name + '</td><td class="charTableEntry">' + 
-	value.hp + '/' + value.max + '</td><td class="charTableEntry"><input type="button" class="damage_btn" id="damage_btn">Damage</button></td>' + 
-	'<td class="charTableEntry"><input type="button" id="heal_btn">Heal</button></td><td class="charTableentry">' +
-	'<input type="button" id="delete_btn">Remove</input></td></tr>').appendTo($('.mytab'));
+    if(value.name.includes("Enemy")){
+    $('<tr class="badChar"><td>' + value.initiative + '</td><td>' + value.name + '</td><td>' + value.hp + '/' + value.max + 
+	'</td><td><input type="button" class="damage_btn" id="damage_btn">Damage</button></td>' + 
+	'<td><input type="button" class="heal_btn" id="heal_btn">Heal</button></td><td>' +
+	'<input type="button" class="delete_btn" id="delete_btn" value="Remove"></input></td></tr>').appendTo($('.mytab'));
+	  }
+	  else{
+	$('<tr class="goodChar"><td>' + value.initiative + '</td><td>' + value.name + '</td><td>' + value.hp + '/' + value.max + 
+	'</td><td><input type="button" class="damage_btn" id="damage_btn">Damage</button></td>' + 
+	'<td><input type="button" class="heal_btn" id="heal_btn">Heal</button></td><td>' +
+	'<input type="button" class="delete_btn" id="delete_btn" value="Remove"></input></td></tr>').appendTo($('.mytab'));
+	  }
   });
 
 });
@@ -57,10 +73,18 @@ if(currHP > parseInt(data[row_index].max, 10)) currHP = data[row_index].max;
 data[row_index].hp = currHP;
 $('.mytab').html('');
   $.each(data, function(index, value) {
-    $('<tr><td class="charTableEntry">' + value.initiative + '</td><td class="charTableEntry">' + value.name + '</td><td class="charTableEntry">' + 
-	value.hp + '/' + value.max + '</td><td class="charTableEntry"><input type="button" class="damage_btn" id="damage_btn">Damage</button></td>' + 
-	'<td class="charTableEntry"><input type="button" id="heal_btn">Heal</button></td><td class="charTableentry">' +
-	'<input type="button" id="delete_btn">Remove</input></td></tr>').appendTo($('.mytab'));
+    if(value.name.includes("Enemy")){
+    $('<tr class="badChar"><td>' + value.initiative + '</td><td>' + value.name + '</td><td>' + value.hp + '/' + value.max + 
+	'</td><td><input type="button" class="damage_btn" id="damage_btn">Damage</button></td>' + 
+	'<td><input type="button" class="heal_btn" id="heal_btn">Heal</button></td><td>' +
+	'<input type="button" class="delete_btn" id="delete_btn" value="Remove"></input></td></tr>').appendTo($('.mytab'));
+	  }
+	  else{
+	$('<tr class="goodChar"><td>' + value.initiative + '</td><td>' + value.name + '</td><td>' + value.hp + '/' + value.max + 
+	'</td><td><input type="button" class="damage_btn" id="damage_btn">Damage</button></td>' + 
+	'<td><input type="button" class="heal_btn" id="heal_btn">Heal</button></td><td>' +
+	'<input type="button" class="delete_btn" id="delete_btn" value="Remove"></input></td></tr>').appendTo($('.mytab'));
+	  }
   });
 
 });
