@@ -1,0 +1,31 @@
+body {
+  font-family: Roboto;
+}
+
+#charTable {
+  width: 800px;
+  padding: 10px 10px;
+  background: #f7f7f7;
+}
+
+.charTableEntry {
+	width: 100px;
+	padding: 10px 10px;
+}
+
+.delete_btn {
+	width: 100px;
+	padding: 10px 10px;
+}
+
+.goodChar {
+	width: 120px;
+	padding: 10px 10px;
+	background: #A8F09C;
+}
+
+.badChar {
+	width: 120px;
+	padding: 10px 10px;
+	background: #FFDCBA;
+}
