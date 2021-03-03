@@ -1,43 +1,10 @@
 <html>
 <head>
-<style>
-body {
-  font-family: Roboto;
-}
-
-#charTable {
-  width: 800px;
-  padding: 10px 10px;
-  background: #f7f7f7;
-}
-
-.charTableEntry {
-	width: 100px;
-	padding: 10px 10px;
-}
-
-.delete_btn {
-	width: 100px;
-	padding: 10px 10px;
-}
-
-.goodChar {
-	width: 120px;
-	padding: 10px 10px;
-	background: #A8F09C;
-}
-
-.badChar {
-	width: 120px;
-	padding: 10px 10px;
-	background: #FFDCBA;
-}
-
-</style>
+	<link rel="stylesheet" href="FightingOrder.css">
+	<script src="FightingOrder.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <input id="id_initiative" name="initiative" type="number" placeholder="Enter initiative here..." />
 <select id="id_name">
 	<option disabled selected value="0">-- Choose an Option --</option>
@@ -67,7 +34,5 @@ body {
   <tbody class="mytab"></tbody>
 </table>
 </div>
-
-<script src="./FightingOrder.js"></script>
 </body>
 </html>
