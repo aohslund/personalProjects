@@ -1,7 +1,4 @@
-Pop both these bad boys into the same folder and open up the html page.
-Works in Chrome and Firefox. It may or may not work in Safari. Make sure you have JavaScript enabled of course.
-
-Page to keep track of battle status in Dungeons & Dragons campaign using JS. <br>
+Page to keep track of battle status in Dungeons & Dragons campaign. <br>
 Dynamically creates table with initiative, name, and hp values<br>
 Can add/remove entries<br>
 Table auto-sorts based on initiative values<br>
